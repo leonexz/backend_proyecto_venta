@@ -1,0 +1,10 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar variables de entorno
+.env
+.env.local
+
+# Ignorar otros archivos
+bin/
+hash-password.js

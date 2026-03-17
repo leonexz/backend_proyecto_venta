@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+.docker/buildx/refs/desktop-linux/desktop-linux/53uqt2vh9oa65bd8dowezls05
+
 # Ignorar node_modules
 node_modules/
 
@@ -9,7 +10,3 @@ node_modules/
 # Ignorar otros archivos
 bin/
 hash-password.js
-=======
-
-.docker/buildx/refs/desktop-linux/desktop-linux/53uqt2vh9oa65bd8dowezls05
->>>>>>> fa14252 (Create .gitignore)

@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend_asociacion
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASSWORD: ${DB_PASSWORD:-postgres}
+      DB_HOST: ${DB_HOST:-postgres_db}
+      DB_NAME: ${DB_NAME:-ASOCIACION}
+      DB_PORT: ${DB_PORT:-5432}
+      JWT_SECRET: ${JWT_SECRET:-cambia_este_secreto_en_produccion}
+      URL_BACKEND: ${URL_BACKEND:-http://192.168.1.76:4200}
+      UPLOAD_DIR: ${UPLOAD_DIR:-/uploads}
+    volumes:
+      - /uploads:/uploads
+    networks:
+      - red-postgres
+
+volumes:
+  backend_uploads:
+
+networks:
+  red-postgres:
+    external: true
